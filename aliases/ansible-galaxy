@@ -1,0 +1,9 @@
+#!/bin/bash
+docker run -it --rm \
+    --env ANSIBLE_REMOTE_USER=${USER} \
+    --volume $SSH_AUTH_SOCK:/ssh-agent \
+    --env SSH_AUTH_SOCK=/ssh-agent \
+    -v ${PWD}:${PWD} \
+    -v ${HOME}/.ssh/known_hosts:/root/.ssh/known_hosts \
+    -w ${PWD} \
+    itsjprentice/docker/ansible ansible-galaxy $@

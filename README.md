@@ -11,8 +11,11 @@ bash build.sh
 ```
 
 ### Running the image
-Once the image is build, you can execute the `ansible` script as a command. Copying to a folder that's added to your path, like `~\bin` will allow you to run ansible like any other Linux command.
+Once the image is build, you can execute the scripts in the `aliases` directory as commands. Copying them to a folder that's added to your path, like `~\bin` will allow you to run ansible like any other Linux command.
 
 ``` bash
 ansible --version
+ansible-galaxy --version
+ansible-playbook --version
+ansible-vault --version
 ```
